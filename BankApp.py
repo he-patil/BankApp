@@ -7,6 +7,7 @@ def main():
     bank2 = Bank.createBank("HDFC Bank", "HDFC")
     bank3 = Bank.createBank("Bank of India", "BOI")
 
+    print("All Banks: ")
     Bank.showBanks()
 
     cust1 = Customer.createCustomer("user1", "UserA", "UserAA")
@@ -21,28 +22,34 @@ def main():
 
     cust3.addAccount(789,"BOI")
 
+    print("All Customers: ")
     Customer.showCustomer()
     
+    print("Withdraw 500 from SBI of user1: ")
     success , message = cust1.withdraw("SBI",500)
     if not success:
         print(message)
     Customer.showCustomer()
 
+    print("Deposit 500 in SBIN of user1: ")
     success , message = cust1.deposit("SBIN",500)
     if not success:
         print(message)
     Customer.showCustomer()
 
+    print("Withdraw 600 from SBI of user1: ")
     success , message = cust1.withdraw("SBI",600)
     if not success:
         print(message)
     Customer.showCustomer()
 
+    print("Transfer 500 from SBI of user1 to SBI of user2: ")
     success , message = cust1.transfer("user2","SBI","SBI",500)
     if not success:
         print(message)
     Customer.showCustomer()
 
+    print("Self transfer 500 from user1's SBI to BOI: ")
     success , message = cust1.transferSelf("SBI","BOI",500)
     if not success:
         print(message)
@@ -50,4 +57,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

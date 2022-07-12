@@ -1,0 +1,78 @@
+All Banks: 
+0: State Bank- SBI
+1: HDFC Bank- HDFC
+2: Bank of India- BOI
+
+All Customers:
+user1   UserA   UserAA   2000
+0   111   0   State Bank   SBI   1000
+1   222   2   Bank of India   BOI   1000
+
+user2   UserB   UserBB   2000
+2   123   1   HDFC Bank   HDFC   1000
+3   321   0   State Bank   SBI   1000
+
+user3   UserC   UserCC   1000
+4   789   2   Bank of India   BOI   1000
+
+Withdraw 500 from SBI of user1:
+user1   UserA   UserAA   1500
+0   111   0   State Bank   SBI   500
+1   222   2   Bank of India   BOI   1000
+
+user2   UserB   UserBB   2000
+2   123   1   HDFC Bank   HDFC   1000
+3   321   0   State Bank   SBI   1000
+
+user3   UserC   UserCC   1000
+4   789   2   Bank of India   BOI   1000
+
+Deposit 500 in SBIN of user1:
+Account not found
+user1   UserA   UserAA   1500
+0   111   0   State Bank   SBI   500
+1   222   2   Bank of India   BOI   1000
+
+user2   UserB   UserBB   2000
+2   123   1   HDFC Bank   HDFC   1000
+3   321   0   State Bank   SBI   1000
+
+user3   UserC   UserCC   1000
+4   789   2   Bank of India   BOI   1000
+
+Withdraw 600 from SBI of user1:
+Insufficient balance
+user1   UserA   UserAA   1500
+0   111   0   State Bank   SBI   500
+1   222   2   Bank of India   BOI   1000
+
+user2   UserB   UserBB   2000
+2   123   1   HDFC Bank   HDFC   1000
+3   321   0   State Bank   SBI   1000
+
+user3   UserC   UserCC   1000
+4   789   2   Bank of India   BOI   1000
+
+Transfer 500 from SBI of user1 to SBI of user2:
+user1   UserA   UserAA   1000
+0   111   0   State Bank   SBI   0
+1   222   2   Bank of India   BOI   1000
+
+user2   UserB   UserBB   2500
+2   123   1   HDFC Bank   HDFC   1000
+3   321   0   State Bank   SBI   1500
+
+user3   UserC   UserCC   1000
+4   789   2   Bank of India   BOI   1000
+
+Self transfer 500 from user1's SBI to BOI:
+user1   UserA   UserAA   1000
+0   111   0   State Bank   SBI   500
+1   222   2   Bank of India   BOI   500
+
+user2   UserB   UserBB   2500
+2   123   1   HDFC Bank   HDFC   1000
+3   321   0   State Bank   SBI   1500
+
+user3   UserC   UserCC   1000
+4   789   2   Bank of India   BOI   1000
